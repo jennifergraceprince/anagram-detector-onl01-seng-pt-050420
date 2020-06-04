@@ -1,14 +1,14 @@
-class Anagram
-  attr_accessor :word_input
+cclass Anagram
+  attr_accessor :word_to_analyze
   
-  def initialize(word_input)
-    @word_to_analyze = word_input 
+  def initialize(word_to_analyze)
+    @word_to_analyze = word_to_analyze 
   end 
   
-  def match(find_anagram) 
-    puts "Must find #{self.word_input} inside the following string: #{find_anagram}"
-    find_anagram.find_all do |word| 
-      if word.split("").sort == self.word_input.split("").sort 
+  def match(find_anagram_in_this_string) 
+    puts "Must find #{self.word_to_analyze} inside the following string: #{find_anagram_in_this_string}"
+    find_anagram_in_this_string.find_all do |word| 
+      if word.split("").sort == self.word_to_analyze.split("").sort 
         word 
       end
     end 
